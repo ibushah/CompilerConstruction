@@ -1,0 +1,22 @@
+
+a_float_int_A__Proc
+
+t1 = 34 + c
+
+t2 = this.b + t1
+
+a=t2
+
+Main_Proc
+
+t4=10.0
+
+t5=6
+
+param t5
+
+param t4
+
+t6=call a_float_int_proc
+
+endP

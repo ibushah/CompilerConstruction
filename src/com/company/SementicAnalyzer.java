@@ -56,7 +56,7 @@ public class SementicAnalyzer {
 
     public static Stack<String> typeStack = new Stack<>();
     public static Stack<String> operatorStack = new Stack<>();
-
+    public static Boolean conditionFlag=false;
     //OBJECT PARAMS N TYPE
     public static String objName = "";
     public static String objType = "";
@@ -280,37 +280,32 @@ public class SementicAnalyzer {
 
     //FUNCTION LOOKUP
 
-    public static String lookupForFunction() {
-        Boolean flag = false;
-
-        String constructorType = FT_type.substring(0, FT_type.indexOf("-"));
-        for (DefinitionTable d : definitionTableList) {
-            if (d.name.equals(FT_name) && !d.category.equals("abstract")) {
-                for (ClassTable c : d.classTableList) {
-                    if (c.name.equals("constructor")) {
-                        flag = true;
-                        if (c.type.equals(constructorType)) {
-                            return c.type;
-                        }
-                    }
-                }
-            }
-        }
-        if (!flag && constructorType.equals("void"))
-            return constructorType;
-
-        errors.add("ERROR:Constructor with following parameters not found");
-        return null;
-
-
-    }
+//    public static String lookupForFunction() {
+//        Boolean flag = false;
+//
+//        String constructorType = FT_type.substring(0, FT_type.indexOf("-"));
+//        for (DefinitionTable d : definitionTableList) {
+//            if (d.name.equals(FT_name) && !d.category.equals("abstract")) {
+//                for (ClassTable c : d.classTableList) {
+//
+//                }
+//            }
+//        }
+//        if (!flag && constructorType.equals("void"))
+//            return constructorType;
+//
+//        errors.add("ERROR:Constructor with following parameters not found");
+//        return null;
+//
+//
+//    }
 
 
     //DOT OPERATOR TYPE RETURN
 
     public static String dotOperatorType(Boolean isFunc) {
 
-        if (globalTypeParent != null && globalChild != null) {
+        if (globalTypeParent != null && globalChild != null && !globalTypeParent.equals("float") && !globalTypeParent.equals("string") && !globalTypeParent.equals("int")) {
             //SEARCH IN CLASS_DEFINITION _TABLE
             String parent = "Object";
             if (!isFunc) {
@@ -383,7 +378,7 @@ public class SementicAnalyzer {
             }
         }
         //
-        return "$";
+        return null;
 
 
     }

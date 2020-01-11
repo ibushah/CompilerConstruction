@@ -2,14 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="aa094e83-f702-4bd1-995d-736e08fc474a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/IntermediateCode" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/company/ICG.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/asad.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/INPUT.txt" beforeDir="false" afterPath="$PROJECT_DIR$/INPUT.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IntermediateCode.txt" beforeDir="false" afterPath="$PROJECT_DIR$/IntermediateCode.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LEXEMES.txt" beforeDir="false" afterPath="$PROJECT_DIR$/LEXEMES.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Lexical_Analyzer/com/company/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Lexical_Analyzer/com/company/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Lexical_Analyzer/com/company/SementicAnalyzer.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Lexical_Analyzer/com/company/SementicAnalyzer.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Lexical_Analyzer/com/company/SyntaxAnalyzer.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Lexical_Analyzer/com/company/SyntaxAnalyzer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Lexical_Analyzer/com/company/TOKEN.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Lexical_Analyzer/com/company/TOKEN.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/results.txt" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/company/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/company/SementicAnalyzer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/SementicAnalyzer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/company/SyntaxAnalyzer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/SyntaxAnalyzer.java" afterDir="false" />
@@ -72,6 +71,7 @@
     <property name="aspect.path.notification.shown" value="true" />
     <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1569817731184" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
@@ -176,6 +176,7 @@
       <workItem from="1578602323713" duration="861000" />
       <workItem from="1578603489953" duration="8543000" />
       <workItem from="1578744335524" duration="7116000" />
+      <workItem from="1578764563444" duration="10158000" />
     </task>
     <task id="LOCAL-00001" summary="Kindly see this lead">
       <created>1569775482283</created>
@@ -391,41 +392,37 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/com/company/SyntaxAnalyzer.java</url>
-          <line>2156</line>
+          <line>2200</line>
           <option name="timeStamp" value="344" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/com/company/SementicAnalyzer.java</url>
-          <line>367</line>
+          <line>362</line>
           <option name="timeStamp" value="362" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/com/company/SyntaxAnalyzer.java</url>
-          <line>841</line>
+          <line>868</line>
           <option name="timeStamp" value="394" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/com/company/SyntaxAnalyzer.java</url>
-          <line>1650</line>
+          <line>1689</line>
           <option name="timeStamp" value="412" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/com/company/SementicAnalyzer.java</url>
-          <line>645</line>
-          <option name="timeStamp" value="431" />
+          <url>file://$PROJECT_DIR$/src/com/company/SyntaxAnalyzer.java</url>
+          <line>1189</line>
+          <option name="timeStamp" value="440" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/com/company/SyntaxAnalyzer.java</url>
-          <line>1151</line>
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/com/company/SyntaxAnalyzer.java</url>
-          <line>1026</line>
-          <option name="timeStamp" value="438" />
+          <line>247</line>
+          <option name="timeStamp" value="445" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/src/com/company/SyntaxAnalyzer.java</url>
-          <line>521</line>
+          <line>547</line>
           <properties class="com.company.SyntaxAnalyzer" method="RETURN">
             <option name="EMULATED" value="true" />
           </properties>

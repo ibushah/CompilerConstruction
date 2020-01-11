@@ -1,22 +1,62 @@
 
-a_float_int_A__Proc
+abx_float_int__Proc
 
-t1 = 34 + c
+t1=34.4
 
-t2 = this.b + t1
+t2=5
 
-a=t2
+param t2
 
-Main_Proc
+param t1
 
-t4=10.0
+t3=call abx_float_int_proc
 
-t5=6
+t4 = t3 * 334
+
+t5=33.34
+
+t6=444
+
+param t6
 
 param t5
 
-param t4
+t7=call abx_float_int_proc
 
-t6=call a_float_int_proc
+t8 = 454 + t7
+
+t9 = t4 + t8
+
+a=t9
+
+t11 = 44 + 33
+
+a=t11
+
+t13 = 3 >= 44
+
+t14 = 3 == 3
+
+t15 = t13 && t14
+
+if( t15== false ) jmpL1
+
+L2:
+
+t16 = 5 == 3
+
+t17 = 4 == 4
+
+t18 = t16 || t17
+
+if(t18== false)jmpL3
+
+jmpL2
+
+L3:
+
+endP
+
+Main_Proc
 
 endP

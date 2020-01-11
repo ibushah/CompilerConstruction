@@ -780,6 +780,7 @@ public class Main {
             {"ArrayList", "ArrayList"},
             {"false", "BOOLEAN_CONSTANT"},
             {"true", "BOOLEAN_CONSTANT"},
+            {"++","INC_DEC"}
 
     };
 

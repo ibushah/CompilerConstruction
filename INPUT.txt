@@ -1,21 +1,8 @@
 class A{
-
-float b;
-A bbc =new A();
-int abx(float b,int c){
-
-
-int a=bbc.abx(34.4,5)*334+454+abx(33.34,444);
-a=44+33;
-
-if(3>=44 && 3==3){
-while(5==3||4==4){
-
-}
-}
-}
 main(){
 
+
+  int a = -40-amir--;
 
 }
 }

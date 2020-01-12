@@ -3,8 +3,8 @@ package com.company;
 import com.company.Sementic.ClassTable;
 import com.company.Sementic.DefinitionTable;
 import com.company.Sementic.FunctionTable;
-import com.sun.org.apache.bcel.internal.generic.GOTO;
-import com.sun.org.apache.xpath.internal.operations.Bool;
+//import com.sun.org.apache.bcel.internal.generic.GOTO;
+//import com.sun.org.apache.xpath.internal.operations.Bool;
 
 import java.lang.instrument.ClassDefinition;
 import java.util.ArrayList;

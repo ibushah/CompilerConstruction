@@ -6,10 +6,8 @@
       <change beforePath="$PROJECT_DIR$/INPUT.txt" beforeDir="false" afterPath="$PROJECT_DIR$/INPUT.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/IntermediateCode.txt" beforeDir="false" afterPath="$PROJECT_DIR$/IntermediateCode.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/LEXEMES.txt" beforeDir="false" afterPath="$PROJECT_DIR$/LEXEMES.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Lexical_Analyzer/com/company/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Lexical_Analyzer/com/company/Main.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Lexical_Analyzer/com/company/SementicAnalyzer.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Lexical_Analyzer/com/company/SementicAnalyzer.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Lexical_Analyzer/com/company/SyntaxAnalyzer.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Lexical_Analyzer/com/company/SyntaxAnalyzer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/company/SementicAnalyzer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/SementicAnalyzer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/company/SyntaxAnalyzer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/SyntaxAnalyzer.java" afterDir="false" />
     </list>
@@ -58,10 +56,6 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
-  </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="width" value="697" />
-    <option name="height" value="728" />
   </component>
   <component name="ProjectId" id="1TNRI3uG0G6iqWFpVJJ6et2bRaH" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -177,6 +171,8 @@
       <workItem from="1578603489953" duration="8543000" />
       <workItem from="1578744335524" duration="7116000" />
       <workItem from="1578764563444" duration="10158000" />
+      <workItem from="1578829627601" duration="122000" />
+      <workItem from="1578829810325" duration="1211000" />
     </task>
     <task id="LOCAL-00001" summary="Kindly see this lead">
       <created>1569775482283</created>
@@ -392,7 +388,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/com/company/SyntaxAnalyzer.java</url>
-          <line>2200</line>
+          <line>2206</line>
           <option name="timeStamp" value="344" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
@@ -407,12 +403,12 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/com/company/SyntaxAnalyzer.java</url>
-          <line>1689</line>
+          <line>1695</line>
           <option name="timeStamp" value="412" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/com/company/SyntaxAnalyzer.java</url>
-          <line>1189</line>
+          <line>1195</line>
           <option name="timeStamp" value="440" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">

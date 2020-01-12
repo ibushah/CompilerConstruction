@@ -580,6 +580,17 @@ public class SementicAnalyzer {
 
     }
 
+    public static String Compatibility(String operator)
+    {
+        if (typeStack.size()!=0 && typeStack.peek().equals("boolean")) {
+           if(operator.equals("!"))
+           {
+               return "boolean";
+           }
+        }
+        return null;
+    }
+
     public static String Compatibility(String Left, String Right, String Operator) {
 
         if (Left.equals("int")) {
@@ -692,6 +703,7 @@ public class SementicAnalyzer {
 
         return null; // Report Error
     }
+
 
     public static boolean isArithmeticOperator(String Operator) {
         if (Operator.equals("-") || Operator.equals("/") || Operator.equals("+") || Operator.equals("*"))

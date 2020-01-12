@@ -2,8 +2,12 @@ class A{
 
 float b;
 A bbc =new A();
+boolean abcd(int a){
+}
 int abx(float b,int c){
 
+boolean bx=true;
+boolean y=!abcd(45);
 
 int a=bbc.abx(34.4,5)*334+454+abx(33.34,444);
 a=44+33;

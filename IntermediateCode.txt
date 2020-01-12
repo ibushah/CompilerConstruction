@@ -1,76 +1,18 @@
 
-abcd_int__Proc
-
-endP
-
-abx_float_int__Proc
-
-bx=true
-
-t2=45
-
-param t2
-
-t3=call abcd_int_proc
-
-y=t3
-
-t5=34.4
-
-t6=5
-
-param t6
-
-param t5
-
-t7=call abx_float_int_proc
-
-t8 = t7 * 334
-
-t9=33.34
-
-t10=444
-
-param t10
-
-param t9
-
-t11=call abx_float_int_proc
-
-t12 = 454 + t11
-
-t13 = t8 + t12
-
-a=t13
-
-t15 = 44 + 33
-
-a=t15
-
-t17 = 3 >= 44
-
-t18 = 3 == 3
-
-t19 = t17 && t18
-
-if( t19== false ) jmpL1
-
-L2:
-
-t20 = 5 == 3
-
-t21 = 4 == 4
-
-t22 = t20 || t21
-
-if(t22== false)jmpL3
-
-jmpL2
-
-L3:
+abcd__Proc
 
 endP
 
 Main_Proc
+
+t1 = 45 * 44
+
+t2 = 54 * t1
+
+t3 = t2 - 55
+
+t4 = 3 + t3
+
+a=t4
 
 endP

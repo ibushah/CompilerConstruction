@@ -874,7 +874,7 @@ public class Main {
     //    char ch = '\b';
     public static void printToken(String cp, String vp, Integer lno) {
         try {
-            FileWriter fw = new FileWriter("E:\\Compiler\\CompilerConstruction\\LEXEMES.txt", true);
+            FileWriter fw = new FileWriter("C:\\Users\\hp\\Desktop\\Compiler-ConstructionIbrahim\\LEXEMES.txt", true);
             fw.write("CLASSPART(" + cp + ")," + "VALUEPART(" + vp + ")," + "LINE NUMBER(" + lno + ")\n");
             fw.close();
             TOKEN token = new TOKEN(cp, vp, lno);
@@ -889,12 +889,12 @@ public class Main {
 
     public void tokenSeperator() {
         try {
-            File file = new File("E:\\Compiler\\CompilerConstruction\\LEXEMES.txt");
+            File file = new File("C:\\Users\\hp\\Desktop\\Compiler-ConstructionIbrahim\\LEXEMES.txt");
             if (file.exists()) {
                 file.delete();
             }
 
-            File filepath = new File("E:\\Compiler\\CompilerConstruction\\INPUT.txt");
+            File filepath = new File("C:\\Users\\hp\\Desktop\\Compiler-ConstructionIbrahim\\INPUT.txt");
             FileReader fr = new FileReader(filepath);
             BufferedReader reader = new BufferedReader(fr);
             String single_line = "";

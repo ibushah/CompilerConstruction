@@ -1,0 +1,12 @@
+class A{
+int b;
+
+
+void abcd(){
+
+}
+main(){
+
+int a=3+54*45*44-55;
+}
+}

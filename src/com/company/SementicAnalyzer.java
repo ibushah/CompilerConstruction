@@ -588,6 +588,14 @@ public class SementicAnalyzer {
                return "boolean";
            }
         }
+        else if(SementicAnalyzer.globalTypeParent!=null)
+        {
+            if(SementicAnalyzer.globalTypeParent.equals("int") || SementicAnalyzer.globalTypeParent.equals("float"))
+            {
+                if(operator.equals("++") || operator.equals("--"))
+                    return "int";
+            }
+        }
         return null;
     }
 

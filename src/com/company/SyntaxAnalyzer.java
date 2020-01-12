@@ -1,4 +1,5 @@
 package com.company;
+
 import java.io.FileWriter;
 import java.util.ArrayList;
 import java.util.List;
@@ -251,8 +252,8 @@ public class SyntaxAnalyzer {
                 index++;
                 if (OE())
                     if (tokenSet.get(index).CP.equals(")")) {
-                        if(SementicAnalyzer.typeStack.size()==0 || !SementicAnalyzer.typeStack.peek().equals("boolean"))
-                            SementicAnalyzer.errors.add("ERROR:condition must return an boolean type at line no "+tokenSet.get(index).L_N0);
+                        if (SementicAnalyzer.typeStack.size() == 0 || !SementicAnalyzer.typeStack.peek().equals("boolean"))
+                            SementicAnalyzer.errors.add("ERROR:condition must return an boolean type at line no " + tokenSet.get(index).L_N0);
 
                         SementicAnalyzer.typeStack.clear();
                         SementicAnalyzer.operatorStack.clear();
@@ -390,8 +391,8 @@ public class SyntaxAnalyzer {
                 if (OE())
                     if (tokenSet.get(index).CP.equals(")")) {
 
-                        if(SementicAnalyzer.typeStack.size()==0 || !SementicAnalyzer.typeStack.peek().equals("boolean"))
-                            SementicAnalyzer.errors.add("ERROR:condition must return an boolean type at line no "+tokenSet.get(index).L_N0);
+                        if (SementicAnalyzer.typeStack.size() == 0 || !SementicAnalyzer.typeStack.peek().equals("boolean"))
+                            SementicAnalyzer.errors.add("ERROR:condition must return an boolean type at line no " + tokenSet.get(index).L_N0);
 
                         SementicAnalyzer.typeStack.clear();
                         SementicAnalyzer.operatorStack.clear();
@@ -440,8 +441,8 @@ public class SyntaxAnalyzer {
                                 if (OE())
                                     if (tokenSet.get(index).CP.equals(")")) {
 
-                                        if(SementicAnalyzer.typeStack.size()==0 || !SementicAnalyzer.typeStack.peek().equals("boolean"))
-                                            SementicAnalyzer.errors.add("ERROR:condition must return an boolean type at line no "+tokenSet.get(index).L_N0);
+                                        if (SementicAnalyzer.typeStack.size() == 0 || !SementicAnalyzer.typeStack.peek().equals("boolean"))
+                                            SementicAnalyzer.errors.add("ERROR:condition must return an boolean type at line no " + tokenSet.get(index).L_N0);
 
                                         SementicAnalyzer.typeStack.clear();
                                         SementicAnalyzer.operatorStack.clear();
@@ -906,7 +907,7 @@ public class SyntaxAnalyzer {
 
     public Boolean T() {
 
-        if (tokenSet.get(index).CP.equals("INTEGER_CONSTANT") || tokenSet.get(index).CP.equals("FLOAT_CONSTANT") || tokenSet.get(index).CP.equals("BOOLEAN_CONSTANT") || tokenSet.get(index).CP.equals("STRING_CONSTANT") || tokenSet.get(index).CP.equals("CHARACTER_CONSTANT") || tokenSet.get(index).CP.equals("(") || tokenSet.get(index).VP.equals("!") || tokenSet.get(index).CP == "INC_DEC" || tokenSet.get(index).CP.equals("THIS_BASE") || tokenSet.get(index).CP.equals("IDENTIFIER")) {
+        if (tokenSet.get(index).CP.equals("INTEGER_CONSTANT") || tokenSet.get(index).CP.equals("FLOAT_CONSTANT") || tokenSet.get(index).CP.equals("BOOLEAN_CONSTANT") || tokenSet.get(index).CP.equals("STRING_CONSTANT") || tokenSet.get(index).CP.equals("CHARACTER_CONSTANT") || tokenSet.get(index).CP.equals("(") || tokenSet.get(index).VP.equals("!") || tokenSet.get(index).CP.equals("INC_DEC") || tokenSet.get(index).CP.equals("THIS_BASE") || tokenSet.get(index).CP.equals("IDENTIFIER")) {
             if (F()) {
 
                 if (T2())
@@ -955,7 +956,7 @@ public class SyntaxAnalyzer {
             }
 
             if (tokenSet.get(index + 1).CP.equals(";") || tokenSet.get(index + 1).CP.equals("ROP") || tokenSet.get(index + 1).CP.equals("PM")
-                    || tokenSet.get(index + 1).CP.equals("MDM") || tokenSet.get(index + 1).CP.equals("OA") || (tokenSet.get(index+1).VP.equals(")") && tokenSet.get(index+2).VP.equals("{"))) {
+                    || tokenSet.get(index + 1).CP.equals("MDM") || tokenSet.get(index + 1).CP.equals("OA") || (tokenSet.get(index + 1).VP.equals(")") && tokenSet.get(index + 2).VP.equals("{"))) {
                 SementicAnalyzer.typeStack.push(SementicAnalyzer.globalTypeParent);
                 //ICG
                 ICG.varNameStack.push(tokenSet.get(index).VP);
@@ -981,24 +982,49 @@ public class SyntaxAnalyzer {
                 }
         } else if (tokenSet.get(index).VP.equals("!")) {
             index++;
-            if (F())
-            {
-                if(SementicAnalyzer.Compatibility("!")==null)
-                    SementicAnalyzer.errors.add("ERROR:Boolean type not found with NOT operator at line no "+tokenSet.get(index).L_N0);
+            if (F()) {
+                if (SementicAnalyzer.Compatibility("!") == null)
+                    SementicAnalyzer.errors.add("ERROR:Boolean type not found with NOT operator at line no " + tokenSet.get(index).L_N0);
 
                 return true;
             }
 
         } else if (tokenSet.get(index).CP.equals("INC_DEC")) {
             index++;
-            if (tokenSet.get(index).CP.equals("THIS_BASE")) {
-                index++;
-                if (tokenSet.get(index).CP.equals("IDENTIFIER")) {
-                    index++;
-                    return true;
+
+            if (tokenSet.get(index).CP.equals("IDENTIFIER")) {
+
+                SementicAnalyzer.globalTypeParent = SementicAnalyzer.globalLookup(tokenSet.get(index).VP, null);
+
+                if (SementicAnalyzer.globalTypeParent != null && (tokenSet.get(index + 1).CP.equals("ASSIGNMENT") || tokenSet.get(index + 1).CP.equals(";") || tokenSet.get(index + 1).CP.equals("ROP") || tokenSet.get(index + 1).CP.equals("PM")
+                        || tokenSet.get(index + 1).CP.equals("MDM") || tokenSet.get(index + 1).CP.equals("OA")) || (tokenSet.get(index + 1).VP.equals(")") && tokenSet.get(index + 2).VP.equals("{"))) {
+                    SementicAnalyzer.typeStack.push(SementicAnalyzer.globalTypeParent);
+
+                    //ICG
+                    ICG.varNameStack.push(ICG.variableName);
+                    ICG.variableName = "";
+                    //*ICG*
                 }
 
+                if (SementicAnalyzer.globalTypeParent == null) {
+                    SementicAnalyzer.errors.add("ERROR:Variable not found at line no " + tokenSet.get(index).L_N0);
+                }
+                if (!SementicAnalyzer.globalParams.isEmpty())
+                    SementicAnalyzer.globalParams += "," + SementicAnalyzer.globalLookup(tokenSet.get(index).VP, null);
+                else
+                    SementicAnalyzer.globalParams += SementicAnalyzer.globalLookup(tokenSet.get(index).VP, null);
+            } else {
+                SementicAnalyzer.globalTypeParent = SementicAnalyzer.className;
+                SementicAnalyzer.globalChild = tokenSet.get(index).VP;
             }
+            index++;
+            if (PRE_INC_DEC()) {
+                if (SementicAnalyzer.Compatibility("++") == null)
+                    SementicAnalyzer.errors.add("ERROR:INC DEC cannot be applied to following type");
+                return true;
+            }
+
+
         } else if (tokenSet.get(index).CP.equals("THIS_BASE")) {
             if (THIS_BASE()) {
                 if (tokenSet.get(index).CP.equals("IDENTIFIER")) {
@@ -1069,7 +1095,7 @@ public class SyntaxAnalyzer {
 
                 }
                 if (SementicAnalyzer.globalTypeParent != null && (tokenSet.get(index + 1).CP.equals("ASSIGNMENT") || tokenSet.get(index + 1).CP.equals(";") || tokenSet.get(index + 1).CP.equals("ROP") || tokenSet.get(index + 1).CP.equals("PM")
-                        || tokenSet.get(index + 1).CP.equals("MDM") || tokenSet.get(index + 1).CP.equals("OA")) || (tokenSet.get(index+1).VP.equals(")") && tokenSet.get(index+2).VP.equals("{"))) {
+                        || tokenSet.get(index + 1).CP.equals("MDM") || tokenSet.get(index + 1).CP.equals("OA")) || (tokenSet.get(index + 1).VP.equals(")") && tokenSet.get(index + 2).VP.equals("{"))) {
                     SementicAnalyzer.typeStack.push(SementicAnalyzer.globalTypeParent);
 
                     //ICG
@@ -1098,13 +1124,14 @@ public class SyntaxAnalyzer {
     }
 
     public Boolean F2() {
-        if (tokenSet.get(index).CP.equals("INC_DEC")) {
-            index++;
-            if (tokenSet.get(index).CP.equals(";")) {
-                index++;
-
-            }
-        } else if (tokenSet.get(index).CP.equals(".") || tokenSet.get(index).CP.equals("(") || tokenSet.get(index).CP.equals("ASSIGNMENT") || tokenSet.get(index).CP.equals("[")) {
+//        if (tokenSet.get(index).CP.equals("INC_DEC")) {
+//            index++;
+//            if (tokenSet.get(index).CP.equals(";")) {
+//                index++;
+//
+//            }
+//        }
+        if (tokenSet.get(index).CP.equals("INC_DEC") || tokenSet.get(index).CP.equals(".") || tokenSet.get(index).CP.equals("(") || tokenSet.get(index).CP.equals("ASSIGNMENT") || tokenSet.get(index).CP.equals("[")) {
             if (ASSIGN_LIST())
                 return true;
 
@@ -1132,7 +1159,7 @@ public class SyntaxAnalyzer {
                     SementicAnalyzer.globalTypeParent = SementicAnalyzer.dotOperatorType(false);
                     //TYPE CHECK N BREAK IDENTIFIER
                     if (SementicAnalyzer.globalTypeParent != null && (tokenSet.get(index).CP.equals(";") || tokenSet.get(index).CP.equals("ROP") || tokenSet.get(index).CP.equals("PM")
-                            || tokenSet.get(index).CP.equals("MDM") || tokenSet.get(index).CP.equals("OA")) || (tokenSet.get(index+1).VP.equals(")") && tokenSet.get(index+2).VP.equals("{"))) {
+                            || tokenSet.get(index).CP.equals("MDM") || tokenSet.get(index).CP.equals("OA")) || (tokenSet.get(index + 1).VP.equals(")") && tokenSet.get(index + 2).VP.equals("{"))) {
                         SementicAnalyzer.typeStack.push(SementicAnalyzer.globalTypeParent);
                         //ICG
                         ICG.varNameStack.push(ICG.variableName);
@@ -1172,31 +1199,29 @@ public class SyntaxAnalyzer {
                         SementicAnalyzer.globalParams = "void";
                     SementicAnalyzer.paramsCheck = false;
                     //ICG
-                    Object[] paramArray = ICG.parameterStack.toArray();
-                    for (int i = paramArray.length - 1; i >= 0; i--) {
-                        String printParams = (String) paramArray[i];
-                        ICG.generateOutput("param " + printParams);
-                    }
-//                    ICG.parameterStack.clear();
-//                    String callT = ICG.createTemp();
-//                    ICG.generateOutput( callT + "=" + "call " + ICG.calledFunc);
-//
 
-                    ICG.calledFunc += ICG.calledFuncParams + "_proc";
-                    ICG.calledFuncParams = "";
-                    ICG.parameterStack.clear();
-                    String callT = ICG.createTemp();
-                    ICG.generateOutput(callT + "=" + "call " + ICG.calledFunc);
-                    ICG.calledFunc = "";
 
 
                     //****
                     index++;
                     SementicAnalyzer.globalTypeParent = SementicAnalyzer.dotOperatorType(true);
-                    if(SementicAnalyzer.globalTypeParent==null)
-                        SementicAnalyzer.errors.add("ERROR:FUNCTION not found at line no "+tokenSet.get(index).L_N0);
+                    if (SementicAnalyzer.globalTypeParent == null)
+                        SementicAnalyzer.errors.add("ERROR:FUNCTION not found at line no " + tokenSet.get(index).L_N0);
                     if (SementicAnalyzer.globalTypeParent != null && (tokenSet.get(index).CP.equals(";") || tokenSet.get(index).CP.equals("ROP") || tokenSet.get(index).CP.equals("PM")
-                            || tokenSet.get(index).CP.equals("MDM") || tokenSet.get(index).CP.equals("OA") || (tokenSet.get(index+1).VP.equals(")") && tokenSet.get(index+2).VP.equals("{")))) {
+                            || tokenSet.get(index).CP.equals("MDM") || tokenSet.get(index).CP.equals("OA") || (tokenSet.get(index + 1).VP.equals(")") && tokenSet.get(index + 2).VP.equals("{")))) {
+                        Object[] paramArray = ICG.parameterStack.toArray();
+                        for (int i = paramArray.length - 1; i >= 0; i--) {
+                            String printParams = (String) paramArray[i];
+                            ICG.generateOutput("param " + printParams);
+                        }
+
+
+                        ICG.calledFunc += ICG.calledFuncParams + "_proc";
+                        ICG.calledFuncParams = "";
+                        ICG.parameterStack.clear();
+                        String callT = ICG.createTemp();
+                        ICG.generateOutput(callT + "=" + "call " + ICG.calledFunc);
+                        ICG.calledFunc = "";
                         SementicAnalyzer.typeStack.push(SementicAnalyzer.globalTypeParent);
 
                         //ICG
@@ -1242,12 +1267,17 @@ public class SyntaxAnalyzer {
             }
 
         } else if (tokenSet.get(index).CP.equals("INC_DEC")) {
+
+            if (SementicAnalyzer.Compatibility(tokenSet.get(index).VP) == null) {
+                SementicAnalyzer.errors.add("INC_DEC cannot be applied to such type variable");
+            }
             index++;
+
 
             if (tokenSet.get(index).CP.equals(";")) {
                 index++;
                 return true;
-            }
+            } else return true;
 
         } else if (tokenSet.get(index).CP.equals("MDM") || tokenSet.get(index).CP.equals("PM") || tokenSet.get(index).CP.equals("ROP") || tokenSet.get(index).CP.equals("OA") || tokenSet.get(index).CP.equals(")") || tokenSet.get(index).CP.equals("$") || tokenSet.get(index).CP.equals(";") || tokenSet.get(index).CP.equals(",") || tokenSet.get(index).CP.equals(")") || tokenSet.get(index).CP.equals("]") || tokenSet.get(index).CP.equals("}")) {
             return true;
@@ -1350,14 +1380,26 @@ public class SyntaxAnalyzer {
 
     public Boolean F_EXPAND() {
         if (tokenSet.get(index).CP.equals(".")) {
+            ICG.variableName += tokenSet.get(index).VP;
             index++;
+            ICG.variableName += tokenSet.get(index).VP;
             if (tokenSet.get(index).CP.equals("IDENTIFIER")) {
+                ICG.calledFunc = tokenSet.get(index).VP;
                 index++;
                 SementicAnalyzer.globalChild = tokenSet.get(index - 1).VP;
                 //SEMENTIC
-                if (!tokenSet.get(index + 1).VP.equals("(")) {
+                if (!tokenSet.get(index).VP.equals("(")) {
 
                     SementicAnalyzer.globalTypeParent = SementicAnalyzer.dotOperatorType(false);
+                    //TYPE CHECK N BREAK IDENTIFIER
+                    if (SementicAnalyzer.globalTypeParent != null && (tokenSet.get(index).CP.equals(";") || tokenSet.get(index).CP.equals("ROP") || tokenSet.get(index).CP.equals("PM")
+                            || tokenSet.get(index).CP.equals("MDM") || tokenSet.get(index).CP.equals("OA")) || (tokenSet.get(index + 1).VP.equals(")") && tokenSet.get(index + 2).VP.equals("{"))) {
+                        SementicAnalyzer.typeStack.push(SementicAnalyzer.globalTypeParent);
+                        //ICG
+                        ICG.varNameStack.push(ICG.variableName);
+                        ICG.variableName = "";
+                        //*ICG*
+                    }
                     if (SementicAnalyzer.globalTypeParent == null) {
                         SementicAnalyzer.errors.add("ERROR:Could not find the variable type at line no " + tokenSet.get(index).L_N0);
                     }
@@ -1379,8 +1421,137 @@ public class SyntaxAnalyzer {
         }
 
         return false;
+
     }
 
+
+    public Boolean PRE_INC_DEC() {
+        if (tokenSet.get(index).CP.equals(".")) {
+            ICG.variableName += tokenSet.get(index).VP;
+            index++;
+            ICG.variableName += tokenSet.get(index).VP;
+            if (tokenSet.get(index).CP.equals("IDENTIFIER")) {
+                ICG.calledFunc = tokenSet.get(index).VP;
+                index++;
+                SementicAnalyzer.globalChild = tokenSet.get(index - 1).VP;
+                //SEMENTIC
+                if (!tokenSet.get(index).VP.equals("(")) {
+
+                    SementicAnalyzer.globalTypeParent = SementicAnalyzer.dotOperatorType(false);
+                    //TYPE CHECK N BREAK IDENTIFIER
+                    if (SementicAnalyzer.globalTypeParent != null && (tokenSet.get(index).CP.equals(";") || tokenSet.get(index).CP.equals("ROP") || tokenSet.get(index).CP.equals("PM")
+                            || tokenSet.get(index).CP.equals("MDM") || tokenSet.get(index).CP.equals("OA")) || (tokenSet.get(index + 1).VP.equals(")") && tokenSet.get(index + 2).VP.equals("{"))) {
+                        SementicAnalyzer.typeStack.push(SementicAnalyzer.globalTypeParent);
+                        //ICG
+                        ICG.varNameStack.push(ICG.variableName);
+                        ICG.variableName = "";
+                        //*ICG*
+                    }
+                    if (SementicAnalyzer.globalTypeParent == null) {
+                        SementicAnalyzer.errors.add("ERROR:Could not find the variable type at line no " + tokenSet.get(index).L_N0);
+                    }
+
+
+                }
+                if (PRE_INC_DEC())
+                    return true;
+            }
+        } else if (tokenSet.get(index).CP.equals("(")) {
+            ICG.variableName += tokenSet.get(index).VP;
+            index++;
+            SementicAnalyzer.paramsCheck = true;
+            SementicAnalyzer.globalParams = "";
+            ICG.calledFuncParams = "";
+            SementicAnalyzer.globalTypeParent = SementicAnalyzer.globalTypeParent.isEmpty() ? SementicAnalyzer.className : SementicAnalyzer.globalTypeParent;
+
+            if (PARAMTER_LIST())
+                if (tokenSet.get(index).CP.equals(")")) {
+                    //SEMENTIC
+                    ICG.variableName += tokenSet.get(index).VP;
+                    if (SementicAnalyzer.globalParams.isEmpty())
+                        SementicAnalyzer.globalParams = "void";
+                    SementicAnalyzer.paramsCheck = false;
+                    //ICG
+                    Object[] paramArray = ICG.parameterStack.toArray();
+                    for (int i = paramArray.length - 1; i >= 0; i--) {
+                        String printParams = (String) paramArray[i];
+                        ICG.generateOutput("param " + printParams);
+                    }
+//                    ICG.parameterStack.clear();
+//                    String callT = ICG.createTemp();
+//                    ICG.generateOutput( callT + "=" + "call " + ICG.calledFunc);
+//
+
+                    ICG.calledFunc += ICG.calledFuncParams + "_proc";
+                    ICG.calledFuncParams = "";
+                    ICG.parameterStack.clear();
+                    String callT = ICG.createTemp();
+                    ICG.generateOutput(callT + "=" + "call " + ICG.calledFunc);
+                    ICG.calledFunc = "";
+
+
+                    //****
+                    index++;
+                    SementicAnalyzer.globalTypeParent = SementicAnalyzer.dotOperatorType(true);
+                    if (SementicAnalyzer.globalTypeParent == null)
+                        SementicAnalyzer.errors.add("ERROR:FUNCTION not found at line no " + tokenSet.get(index).L_N0);
+                    if (SementicAnalyzer.globalTypeParent != null && (tokenSet.get(index).CP.equals(";") || tokenSet.get(index).CP.equals("ROP") || tokenSet.get(index).CP.equals("PM")
+                            || tokenSet.get(index).CP.equals("MDM") || tokenSet.get(index).CP.equals("OA") || (tokenSet.get(index + 1).VP.equals(")") && tokenSet.get(index + 2).VP.equals("{")))) {
+                        SementicAnalyzer.typeStack.push(SementicAnalyzer.globalTypeParent);
+
+                        //ICG
+                        ICG.varNameStack.push(callT);
+                        ICG.variableName = "";
+                        //*ICG*
+                    }
+
+                    if (SementicAnalyzer.globalTypeParent == null) {
+                        SementicAnalyzer.errors.add("ERROR:Could not find the variable type at line no " + tokenSet.get(index).L_N0);
+                    }
+                    SementicAnalyzer.globalParams = "";
+
+                    if (INC_DEC_END())
+                        return true;
+                }
+        }
+        return true;
+    }
+
+    public Boolean INC_DEC_END() {
+        if (tokenSet.get(index).CP.equals(".")) {
+            ICG.variableName += tokenSet.get(index).VP;
+            index++;
+            ICG.variableName += tokenSet.get(index).VP;
+            if (tokenSet.get(index).CP.equals("IDENTIFIER")) {
+                ICG.calledFunc = tokenSet.get(index).VP;
+                index++;
+                SementicAnalyzer.globalChild = tokenSet.get(index - 1).VP;
+                //SEMENTIC
+                if (!tokenSet.get(index).VP.equals("(")) {
+
+                    SementicAnalyzer.globalTypeParent = SementicAnalyzer.dotOperatorType(false);
+                    //TYPE CHECK N BREAK IDENTIFIER
+                    if (SementicAnalyzer.globalTypeParent != null && (tokenSet.get(index).CP.equals(";") || tokenSet.get(index).CP.equals("ROP") || tokenSet.get(index).CP.equals("PM")
+                            || tokenSet.get(index).CP.equals("MDM") || tokenSet.get(index).CP.equals("OA")) || (tokenSet.get(index + 1).VP.equals(")") && tokenSet.get(index + 2).VP.equals("{"))) {
+                        SementicAnalyzer.typeStack.push(SementicAnalyzer.globalTypeParent);
+                        //ICG
+                        ICG.varNameStack.push(ICG.variableName);
+                        ICG.variableName = "";
+                        //*ICG*
+                    }
+                    if (SementicAnalyzer.globalTypeParent == null) {
+                        SementicAnalyzer.errors.add("ERROR:Could not find the variable type at line no " + tokenSet.get(index).L_N0);
+                    }
+
+
+                }
+                if (PRE_INC_DEC())
+                    return true;
+
+            }
+        }
+        return false;
+    }
 
     public Boolean INIT_EMPTY() {
         if (tokenSet.get(index).CP.equals("ASSIGNMENT")) {
@@ -1660,7 +1831,7 @@ public class SyntaxAnalyzer {
         } else if (tokenSet.get(index).CP.equals("IDENTIFIER")) {
             SementicAnalyzer.globalTypeParent = SementicAnalyzer.globalLookup(tokenSet.get(index).VP, null);
             if (tokenSet.get(index + 1).VP.equals("(")) {
-                SementicAnalyzer.globalTypeParent=SementicAnalyzer.className;
+                SementicAnalyzer.globalTypeParent = SementicAnalyzer.className;
                 SementicAnalyzer.globalChild = tokenSet.get(index).VP;
             }
 
@@ -1745,7 +1916,7 @@ public class SyntaxAnalyzer {
             SementicAnalyzer.typeStack.push(tokenSet.get(index - 1).VP);
             if (OBJECT_CREATION())
                 return true;
-        } else if (tokenSet.get(index).CP.equals(".") || tokenSet.get(index).CP.equals("[") || tokenSet.get(index).CP.equals("ASSIGNMENT") || tokenSet.get(index).CP.equals("(") || tokenSet.get(index).CP.equals(";")) {
+        } else if (tokenSet.get(index).CP.equals(".") || tokenSet.get(index).CP.equals("[") || tokenSet.get(index).CP.equals("ASSIGNMENT") || tokenSet.get(index).CP.equals("INC_DEC") || tokenSet.get(index).CP.equals("(") || tokenSet.get(index).CP.equals(";")) {
             //calledFUNCTION
             ICG.calledFunc = tokenSet.get(index - 1).VP;
             //calledFUNCTION

@@ -2,9 +2,22 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="aa094e83-f702-4bd1-995d-736e08fc474a" name="Default Changelist" comment="activation key expire code">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/INPUT.txt" beforeDir="false" afterPath="$PROJECT_DIR$/INPUT.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IntermediateCode.txt" beforeDir="false" afterPath="$PROJECT_DIR$/IntermediateCode.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/LEXEMES.txt" beforeDir="false" afterPath="$PROJECT_DIR$/LEXEMES.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Lexical_Analyzer/com/company/ICG.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Lexical_Analyzer/com/company/ICG.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Lexical_Analyzer/com/company/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Lexical_Analyzer/com/company/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Lexical_Analyzer/com/company/Sementic/ClassTable.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Lexical_Analyzer/com/company/Sementic/ClassTable.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Lexical_Analyzer/com/company/Sementic/DefinitionTable.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Lexical_Analyzer/com/company/Sementic/DefinitionTable.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Lexical_Analyzer/com/company/Sementic/FunctionTable.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Lexical_Analyzer/com/company/Sementic/FunctionTable.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Lexical_Analyzer/com/company/SementicAnalyzer.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Lexical_Analyzer/com/company/SementicAnalyzer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Lexical_Analyzer/com/company/SyntaxAnalyzer.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Lexical_Analyzer/com/company/SyntaxAnalyzer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Lexical_Analyzer/com/company/TOKEN.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Lexical_Analyzer/com/company/TOKEN.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/SementicAnalyzer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/SementicAnalyzer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/SyntaxAnalyzer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/SyntaxAnalyzer.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -29,24 +42,6 @@
     <expand />
     <select />
   </component>
-  <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/INPUT.txt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="12" column="1" lean-forward="true" selection-start-line="12" selection-start-column="1" selection-end-line="12" selection-end-column="1" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/LEXEMES.txt">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-    </leaf>
-  </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
@@ -62,13 +57,6 @@
       </map>
     </option>
   </component>
-  <component name="IdeDocumentHistory">
-    <option name="CHANGED_PATHS">
-      <list>
-        <option value="$PROJECT_DIR$/INPUT.txt" />
-      </list>
-    </option>
-  </component>
   <component name="NewModuleRootManager" inherit-compiler-output="true">
     <exclude-output />
     <content url="file://$MODULE_DIR$">
@@ -77,50 +65,8 @@
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="width" value="697" />
-    <option name="height" value="728" />
-  </component>
   <component name="ProjectId" id="1TNRI3uG0G6iqWFpVJJ6et2bRaH" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
-  <component name="ProjectView">
-    <navigator proportions="" version="1">
-      <foldersAlwaysOnTop value="true" />
-    </navigator>
-    <panes>
-      <pane id="PackagesPane" />
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="CompilerConstruction" type="b2602c69:ProjectViewProjectNode" />
-              <item name="CompilerConstruction" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="CompilerConstruction" type="b2602c69:ProjectViewProjectNode" />
-              <item name="CompilerConstruction" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="CompilerConstruction" type="b2602c69:ProjectViewProjectNode" />
-              <item name="CompilerConstruction" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="company" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="CompilerConstruction" type="b2602c69:ProjectViewProjectNode" />
-              <item name="CompilerConstruction" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="company" type="462c0819:PsiDirectoryNode" />
-              <item name="Sementic" type="462c0819:PsiDirectoryNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
-      <pane id="Scope" />
-    </panes>
-  </component>
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
@@ -236,6 +182,7 @@
       <workItem from="1578744335524" duration="7116000" />
       <workItem from="1578764563444" duration="10158000" />
       <workItem from="1578861216595" duration="229000" />
+      <workItem from="1578861841918" duration="4562000" />
     </task>
     <task id="LOCAL-00001" summary="Kindly see this lead">
       <created>1569775482283</created>
@@ -394,9 +341,6 @@
     <option name="localTasksCounter" value="23" />
     <servers />
   </component>
-  <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="2648000" />
-  </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
       <is-autoscroll-to-source value="true" />
@@ -405,45 +349,6 @@
       <are-packages-shown value="true" />
       <is-autoscroll-to-source value="true" />
     </todo-panel>
-  </component>
-  <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="true" />
-    <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25340393" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info id="Designer" order="2" />
-      <window_info id="Image Layers" order="3" />
-      <window_info id="Capture Tool" order="4" />
-      <window_info id="UI Designer" order="5" />
-      <window_info id="Favorites" order="6" side_tool="true" />
-      <window_info id="Web" order="7" side_tool="true" />
-      <window_info anchor="bottom" id="Messages" order="0" weight="0.32569557" />
-      <window_info anchor="bottom" id="Message" order="1" />
-      <window_info anchor="bottom" id="Find" order="2" weight="0.328594" />
-      <window_info anchor="bottom" id="Run" order="3" weight="0.3371522" />
-      <window_info anchor="bottom" id="Debug" order="4" weight="0.39934534" />
-      <window_info anchor="bottom" id="Cvs" order="5" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="6" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="7" />
-      <window_info anchor="bottom" id="Spring" order="8" />
-      <window_info anchor="bottom" id="Terminal" order="9" />
-      <window_info anchor="bottom" id="Docker" order="10" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
-      <window_info anchor="bottom" id="Java Enterprise" order="12" />
-      <window_info anchor="bottom" id="Database Changes" order="13" />
-      <window_info anchor="bottom" id="Version Control" order="14" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Maven" order="3" />
-      <window_info anchor="right" id="Palette" order="4" />
-      <window_info anchor="right" id="Capture Analysis" order="5" />
-      <window_info anchor="right" id="Database" order="6" />
-      <window_info anchor="right" id="Palette&#9;" order="7" />
-      <window_info anchor="right" id="Theme Preview" order="8" />
-      <window_info anchor="right" id="Bean Validation" order="9" />
-    </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
@@ -454,12 +359,6 @@
         <entry key="MAIN">
           <value>
             <State>
-              <option name="RECENTLY_FILTERED_USER_GROUPS">
-                <collection />
-              </option>
-              <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
-                <collection />
-              </option>
               <option name="COLUMN_ORDER" />
             </State>
           </value>
@@ -509,58 +408,72 @@
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/com/company/Main.java</url>
           <line>689</line>
-          <properties />
           <option name="timeStamp" value="297" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/com/company/SyntaxAnalyzer.java</url>
-          <line>2197</line>
-          <properties />
+          <line>2368</line>
           <option name="timeStamp" value="344" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/com/company/SementicAnalyzer.java</url>
           <line>362</line>
-          <properties />
           <option name="timeStamp" value="362" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/com/company/SyntaxAnalyzer.java</url>
-          <line>865</line>
-          <properties />
+          <line>866</line>
           <option name="timeStamp" value="394" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/com/company/SyntaxAnalyzer.java</url>
-          <line>1686</line>
-          <properties />
+          <line>1857</line>
           <option name="timeStamp" value="412" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/com/company/SyntaxAnalyzer.java</url>
-          <line>1186</line>
-          <properties />
-          <option name="timeStamp" value="440" />
+          <line>245</line>
+          <option name="timeStamp" value="445" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/com/company/SyntaxAnalyzer.java</url>
-          <line>244</line>
-          <properties />
-          <option name="timeStamp" value="445" />
+          <line>1269</line>
+          <option name="timeStamp" value="447" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/com/company/SyntaxAnalyzer.java</url>
+          <line>1126</line>
+          <option name="timeStamp" value="448" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/com/company/SementicAnalyzer.java</url>
+          <line>590</line>
+          <option name="timeStamp" value="450" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/com/company/SyntaxAnalyzer.java</url>
+          <line>991</line>
+          <option name="timeStamp" value="451" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/src/com/company/SyntaxAnalyzer.java</url>
-          <line>544</line>
+          <line>545</line>
           <properties class="com.company.SyntaxAnalyzer" method="RETURN">
             <option name="EMULATED" value="true" />
           </properties>
           <option name="timeStamp" value="406" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/com/company/SementicAnalyzer.java</url>
+          <line>455</line>
+          <properties class="com.company.SementicAnalyzer" method="returnStatementError">
+            <option name="EMULATED" value="true" />
+          </properties>
+          <option name="timeStamp" value="453" />
+        </line-breakpoint>
       </breakpoints>
       <default-breakpoints>
-        <breakpoint enabled="true" type="javascript-exception">
-          <properties />
-        </breakpoint>
+        <breakpoint enabled="true" type="javascript-exception" />
       </default-breakpoints>
     </breakpoint-manager>
   </component>
@@ -597,66 +510,5 @@
         <evaluation-mode>CODE_FRAGMENT</evaluation-mode>
       </expression>
     </expressions>
-  </component>
-  <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/com/company/SyntaxAnalyzer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="20" selection-start-column="20" selection-end-column="20" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/company/SementicAnalyzer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="6" column="40" selection-start-line="6" selection-start-column="40" selection-end-line="6" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/company/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="6440">
-          <caret line="325" selection-start-line="325" selection-end-line="325" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/IntermediateCode.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/company/backUpCode.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="5940">
-          <caret line="297" column="17" selection-start-line="297" selection-start-column="17" selection-end-line="297" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/company/TOKEN.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="580">
-          <caret line="37" column="5" selection-start-line="37" selection-start-column="5" selection-end-line="37" selection-end-column="5" />
-          <folding>
-            <element signature="e#408#409#0" expanded="true" />
-            <element signature="e#433#434#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/LEXEMES.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret lean-forward="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/INPUT.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="80">
-          <caret line="4" column="24" selection-start-line="4" selection-start-column="24" selection-end-line="4" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
   </component>
 </project>

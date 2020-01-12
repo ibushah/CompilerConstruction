@@ -1,21 +1,23 @@
 
+abcd_int__Proc
+
+endP
+
 abx_float_int__Proc
 
-t1=34.4
+bx=true
 
-t2=5
+t2=45
 
 param t2
 
-param t1
+t3=call abcd_int_proc
 
-t3=call abx_float_int_proc
+y=t3
 
-t4 = t3 * 334
+t5=34.4
 
-t5=33.34
-
-t6=444
+t6=5
 
 param t6
 
@@ -23,33 +25,45 @@ param t5
 
 t7=call abx_float_int_proc
 
-t8 = 454 + t7
+t8 = t7 * 334
 
-t9 = t4 + t8
+t9=33.34
 
-a=t9
+t10=444
 
-t11 = 44 + 33
+param t10
 
-a=t11
+param t9
 
-t13 = 3 >= 44
+t11=call abx_float_int_proc
 
-t14 = 3 == 3
+t12 = 454 + t11
 
-t15 = t13 && t14
+t13 = t8 + t12
 
-if( t15== false ) jmpL1
+a=t13
+
+t15 = 44 + 33
+
+a=t15
+
+t17 = 3 >= 44
+
+t18 = 3 == 3
+
+t19 = t17 && t18
+
+if( t19== false ) jmpL1
 
 L2:
 
-t16 = 5 == 3
+t20 = 5 == 3
 
-t17 = 4 == 4
+t21 = 4 == 4
 
-t18 = t16 || t17
+t22 = t20 || t21
 
-if(t18== false)jmpL3
+if(t22== false)jmpL3
 
 jmpL2
 

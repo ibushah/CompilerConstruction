@@ -982,7 +982,13 @@ public class SyntaxAnalyzer {
         } else if (tokenSet.get(index).VP.equals("!")) {
             index++;
             if (F())
+            {
+                if(SementicAnalyzer.Compatibility("!")==null)
+                    SementicAnalyzer.errors.add("ERROR:Boolean type not found with NOT operator at line no "+tokenSet.get(index).L_N0);
+
                 return true;
+            }
+
         } else if (tokenSet.get(index).CP.equals("INC_DEC")) {
             index++;
             if (tokenSet.get(index).CP.equals("THIS_BASE")) {

@@ -5,6 +5,12 @@
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/INPUT.txt" beforeDir="false" afterPath="$PROJECT_DIR$/INPUT.txt" afterDir="false" />
+<<<<<<< HEAD
+      <change beforePath="$PROJECT_DIR$/IntermediateCode.txt" beforeDir="false" afterPath="$PROJECT_DIR$/IntermediateCode.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LEXEMES.txt" beforeDir="false" afterPath="$PROJECT_DIR$/LEXEMES.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Lexical_Analyzer/com/company/SementicAnalyzer.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Lexical_Analyzer/com/company/SementicAnalyzer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Lexical_Analyzer/com/company/SyntaxAnalyzer.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Lexical_Analyzer/com/company/SyntaxAnalyzer.class" afterDir="false" />
+=======
       <change beforePath="$PROJECT_DIR$/LEXEMES.txt" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Lexical_Analyzer/com/company/ICG.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Lexical_Analyzer/com/company/ICG.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Lexical_Analyzer/com/company/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Lexical_Analyzer/com/company/Main.class" afterDir="false" />
@@ -15,6 +21,7 @@
       <change beforePath="$PROJECT_DIR$/out/production/Lexical_Analyzer/com/company/SyntaxAnalyzer.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Lexical_Analyzer/com/company/SyntaxAnalyzer.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Lexical_Analyzer/com/company/TOKEN.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Lexical_Analyzer/com/company/TOKEN.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/company/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Main.java" afterDir="false" />
+>>>>>>> a63296210b36ae6f0f07c2ad70b470c77721c6fe
       <change beforePath="$PROJECT_DIR$/src/com/company/SementicAnalyzer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/SementicAnalyzer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/company/SyntaxAnalyzer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/SyntaxAnalyzer.java" afterDir="false" />
     </list>
@@ -153,10 +160,6 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
-  </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="width" value="697" />
-    <option name="height" value="728" />
   </component>
   <component name="ProjectId" id="1TNRI3uG0G6iqWFpVJJ6et2bRaH" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -310,7 +313,12 @@
       <workItem from="1578603489953" duration="8543000" />
       <workItem from="1578744335524" duration="7116000" />
       <workItem from="1578764563444" duration="10158000" />
+<<<<<<< HEAD
+      <workItem from="1578829627601" duration="122000" />
+      <workItem from="1578829810325" duration="1211000" />
+=======
       <workItem from="1578823672786" duration="2079000" />
+>>>>>>> a63296210b36ae6f0f07c2ad70b470c77721c6fe
     </task>
     <task id="LOCAL-00001" summary="Kindly see this lead">
       <created>1569775482283</created>
@@ -589,8 +597,12 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/com/company/SyntaxAnalyzer.java</url>
+<<<<<<< HEAD
+          <line>2206</line>
+=======
           <line>2197</line>
           <properties />
+>>>>>>> a63296210b36ae6f0f07c2ad70b470c77721c6fe
           <option name="timeStamp" value="344" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
@@ -607,14 +619,22 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/com/company/SyntaxAnalyzer.java</url>
+<<<<<<< HEAD
+          <line>1695</line>
+=======
           <line>1686</line>
           <properties />
+>>>>>>> a63296210b36ae6f0f07c2ad70b470c77721c6fe
           <option name="timeStamp" value="412" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/com/company/SyntaxAnalyzer.java</url>
+<<<<<<< HEAD
+          <line>1195</line>
+=======
           <line>1186</line>
           <properties />
+>>>>>>> a63296210b36ae6f0f07c2ad70b470c77721c6fe
           <option name="timeStamp" value="440" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">

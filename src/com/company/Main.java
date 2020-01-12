@@ -274,7 +274,14 @@ public class Main {
                     i++;
                     count = count - 1;
                     Topindex = i;
-                    return temp;
+                    if (line.toCharArray()[i] == '+') {
+                        return returnWhatStoredInTemp(temp, line.toCharArray(), i);
+                    }
+                    else{
+
+                        return temp;
+                    }
+
                 }
                 else {
                     if (isStringOnlyAlphabet(temp)) {
@@ -285,6 +292,7 @@ public class Main {
                     i++;
                     count = count - 1;
                     Topindex = i;
+
 
 
                     if (line.toCharArray()[i] == '+') {
@@ -321,8 +329,23 @@ public class Main {
                     i++;
                     count = count - 1;
                     Topindex = i;
-                    return temp;
-                } else {
+                    if (line.toCharArray()[i] == '-') {
+                        return returnWhatStoredInTemp(temp, line.toCharArray(), i);
+                    }
+                    else{
+                        return temp;
+                    }
+
+                }
+                else {
+                    if (isStringOnlyAlphabet(temp)) {
+                        Topindex = i;
+                        return temp;
+                    }
+                    temp += line.toCharArray()[i];
+                    i++;
+                    count = count - 1;
+                    Topindex = i;
 
 
                     if (line.toCharArray()[i] == '-') {
@@ -851,7 +874,7 @@ public class Main {
     //    char ch = '\b';
     public static void printToken(String cp, String vp, Integer lno) {
         try {
-            FileWriter fw = new FileWriter("C:\\Users\\hp\\Desktop\\Compiler-ConstructionIbrahim\\LEXEMES.txt", true);
+            FileWriter fw = new FileWriter("E:\\Compiler\\CompilerConstruction\\LEXEMES.txt", true);
             fw.write("CLASSPART(" + cp + ")," + "VALUEPART(" + vp + ")," + "LINE NUMBER(" + lno + ")\n");
             fw.close();
             TOKEN token = new TOKEN(cp, vp, lno);
@@ -866,12 +889,12 @@ public class Main {
 
     public void tokenSeperator() {
         try {
-            File file = new File("C:\\Users\\hp\\Desktop\\Compiler-ConstructionIbrahim\\LEXEMES.txt");
+            File file = new File("E:\\Compiler\\CompilerConstruction\\LEXEMES.txt");
             if (file.exists()) {
                 file.delete();
             }
 
-            File filepath = new File("C:\\Users\\hp\\Desktop\\Compiler-ConstructionIbrahim\\INPUT.txt");
+            File filepath = new File("E:\\Compiler\\CompilerConstruction\\INPUT.txt");
             FileReader fr = new FileReader(filepath);
             BufferedReader reader = new BufferedReader(fr);
             String single_line = "";

@@ -1,7 +1,4 @@
 package com.company;
-
-import org.omg.PortableInterceptor.SYSTEM_EXCEPTION;
-
 import java.io.FileWriter;
 import java.util.ArrayList;
 import java.util.List;
